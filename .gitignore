@@ -11,3 +11,4 @@ scgi_params
 sites-enabled
 uwsgi_params
 win-utf
+*.bak
