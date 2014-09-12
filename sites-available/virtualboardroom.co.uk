@@ -1,0 +1,11 @@
+server {
+	server_name virtualboardroom.lpil.uk;
+
+	root /usr/share/nginx/www/virtualboardroom/;
+	index index.html index.htm;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+
+}

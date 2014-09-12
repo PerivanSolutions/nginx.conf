@@ -1,0 +1,19 @@
+server {
+	# server_name perivan.co.uk;
+	server_name 178.62.13.11;
+
+	root /usr/share/nginx/www/;
+	index index.html index.htm;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+
+	location /doc/ {
+		alias /usr/share/doc/;
+		autoindex on;
+		allow 127.0.0.1;
+		allow ::1;
+		deny all;
+	}
+}

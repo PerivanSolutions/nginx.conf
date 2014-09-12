@@ -1,0 +1,18 @@
+server {
+	server_name perivansolutions.lpil.uk;
+
+	root /usr/share/nginx/www/perivansolutions/;
+	index index.html index.htm;
+
+	location /investor {
+		root /usr/share/nginx/www/;
+		include /etc/nginx/conf/php;
+	}
+
+	include /etc/nginx/conf/php;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+
+}

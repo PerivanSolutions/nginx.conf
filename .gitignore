@@ -1,0 +1,13 @@
+conf.d
+fastcgi_params
+koi-utf
+koi-win
+mime.types
+naxsi.rules
+naxsi_core.rules
+nginx.conf
+proxy_params
+scgi_params
+sites-enabled
+uwsgi_params
+win-utf
