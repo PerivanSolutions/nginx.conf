@@ -8,8 +8,8 @@ server {
 		root /usr/share/nginx/www/;
 
 		# Whitelist. Serve these files extensions only
-		if ($request_filename !~* \.(html|pdf)$ ) {
-		  return 404;
+		if ($request_filename !~* \.(html|php|pdf)$ ) {
+		  return 403;
 		  break;
 		}
 		include /etc/nginx/conf/php;
