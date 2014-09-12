@@ -4,11 +4,11 @@ server {
 	root /usr/share/nginx/www/perivansolutions/;
 	index index.html index.htm;
 
-	location /investor {
+	location ~ ^/(investor|order-tracking)/ {
 		root /usr/share/nginx/www/;
 
 		# Whitelist. Serve these files extensions only
-		if ($request_filename !~* \.(html|php|pdf)$ ) {
+		if ($request_filename !~* \.(css|js|pdf|php|html)$ ) {
 		  return 403;
 		  break;
 		}
