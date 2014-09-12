@@ -6,6 +6,12 @@ server {
 
 	location /investor {
 		root /usr/share/nginx/www/;
+
+		# Whitelist. Serve these files extensions only
+		if ($request_filename !~* \.(html|pdf)$ ) {
+		  return 404;
+		  break;
+		}
 		include /etc/nginx/conf/php;
 	}
 
