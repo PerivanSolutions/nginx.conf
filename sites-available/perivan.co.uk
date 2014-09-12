@@ -1,1 +1,24 @@
-../sites-available/perivan-sites-lpil
+server {
+	server_name perivan.lpil.uk;
+
+	root /usr/share/nginx/www/perivan/;
+	index index.html index.htm index.php;
+
+	include /etc/nginx/conf/php;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+
+}
+
+server {
+	server_name 178.62.13.11;
+
+	root /usr/share/nginx/www/;
+	index index.html index.htm;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+}
