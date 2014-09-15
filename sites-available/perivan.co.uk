@@ -4,8 +4,8 @@ server {
 	root /usr/share/nginx/www/perivan/;
 	index index.html index.htm index.php;
 
-	location /images {
-		alias /usr/share/nginx/www/images;
+	location /static {
+		alias /usr/share/nginx/www/static;
 	}
 
 	include /etc/nginx/conf/php;
