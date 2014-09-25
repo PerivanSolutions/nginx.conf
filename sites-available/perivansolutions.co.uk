@@ -1,5 +1,5 @@
 server {
-	server_name perivansolutions.lpil.uk;
+	server_name www.perivansolutions.co.uk perivansolutions.co.uk perivansolutions.lpil.uk;
 
 	root /usr/share/nginx/www/perivansolutions/;
 	index index.html index.htm;

@@ -1,5 +1,5 @@
 server {
-	server_name virtualboardroom.lpil.uk;
+	server_name virtualboardroom.co.uk www.virtualboardroom.co.uk virtualboardroom.lpil.uk;
 
 	root /usr/share/nginx/www/virtualboardroom/;
 	index index.html index.htm;

@@ -1,5 +1,5 @@
 server {
-	server_name perivanfinancialpod.lpil.uk;
+	server_name perivanfinancialpod.co.uk www.perivanfinancialpod.co.uk perivanfinancialpod.lpil.uk;
 
 	root /usr/share/nginx/www/perivanfinancialpod/;
 	index index.html index.htm;

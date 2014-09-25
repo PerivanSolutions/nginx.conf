@@ -1,5 +1,5 @@
 server {
-	server_name marketingstore.lpil.uk;
+	server_name marketingstore.co.uk www.marketingstore.co.uk marketingstore.lpil.uk;
 
 	root /usr/share/nginx/www/marketingstore/;
 	index index.html index.htm;

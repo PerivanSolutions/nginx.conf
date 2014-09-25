@@ -1,5 +1,5 @@
 server {
-	server_name perivanfinancial.lpil.uk;
+	server_name perivanfinancial.co.uk www.perivanfinancial.co.uk perivanfinancial.lpil.uk;
 
 	root /usr/share/nginx/www/perivanfinancial/;
 	index index.html index.htm;
