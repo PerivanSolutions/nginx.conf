@@ -1,8 +1,12 @@
 server {
+	listen 80 default_server;
+
 	server_name perivan.co.uk www.perivan.co.uk perivan.lpil.uk;
 
 	root /usr/share/nginx/www/perivan/;
 	index index.html index.htm index.php;
+
+	error_page 404 404.html;
 
 	location /static {
 		alias /usr/share/nginx/www/static;
@@ -14,15 +18,4 @@ server {
 		try_files $uri $uri/ index.html;
 	}
 
-}
-
-server {
-	server_name 178.62.13.11;
-
-	root /usr/share/nginx/www/;
-	index index.html index.htm;
-
-	location / {
-		try_files $uri $uri/ index.html;
-	}
 }

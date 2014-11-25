@@ -4,6 +4,8 @@ server {
 	root /usr/share/nginx/www/perivanfinancial/;
 	index index.html index.htm;
 
+	error_page 404 http://www.perivan.co.uk/404.html;
+
 	location / {
 		try_files $uri $uri/ index.html;
 	}
