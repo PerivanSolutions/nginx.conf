@@ -8,11 +8,13 @@ server {
 
 	error_page 404 404.html;
 
+	include /etc/nginx/conf/expire-images-1m;
+	include /etc/nginx/conf/php;
+
 	location /static {
 		alias /usr/share/nginx/www/static;
+		include /etc/nginx/conf/expire-images-1m;
 	}
-
-	include /etc/nginx/conf/php;
 
 	location / {
 		try_files $uri $uri/ index.html;

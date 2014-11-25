@@ -1,0 +1,4 @@
+location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz)$ {
+	expires 1M;
+	add_header Cache-Control "public";
+}

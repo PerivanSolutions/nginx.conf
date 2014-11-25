@@ -6,6 +6,8 @@ server {
 
 	error_page 404 http://www.perivan.co.uk/404.html;
 
+	include /etc/nginx/conf/expire-images-1m;
+
 	location ~ ^/(investor|order-tracking)/ {
 		root /usr/share/nginx/www/;
 
