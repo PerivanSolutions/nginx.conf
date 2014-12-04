@@ -4,12 +4,20 @@ server {
 	root /usr/share/nginx/www/virtualboardroom/;
 	index index.html index.htm;
 
-	error_page 404 http://www.perivan.co.uk/404.html;
+	# error_page 404 http://www.perivan.co.uk/404.html;
 
-	include /etc/nginx/conf/expire-images-1m;
+	# include /etc/nginx/conf/expire-images-1m;
+
+	location /guides {
+		alias /usr/share/nginx/www/static/vbr-guides/;
+		add_header X-Robots-Tag "noindex";
+	}
+	location /pdfs {
+		alias /usr/share/nginx/www/static/vbr-guides/;
+		add_header X-Robots-Tag "noindex";
+	}
 
 	location / {
 		try_files $uri $uri/ index.html;
 	}
-
 }
