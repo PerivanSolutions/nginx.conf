@@ -1,5 +1,5 @@
 server {
-	server_name www.dotapprove.co.uk dotapprove.lpil.uk;
+	server_name www.dotapprove.co.uk www.financialpromotions.solutions financialpromotions.solutions dotapprove.lpil.uk;
 
 	root /usr/share/nginx/www/dotapprove/;
 	index index.html index.htm;
