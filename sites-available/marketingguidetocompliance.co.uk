@@ -1,0 +1,12 @@
+server {
+	server_name marketingguidetocompliance.co.uk www.marketingguidetocompliance.co.uk;
+
+	root /usr/share/nginx/www/perivan/guide-to-compliance/;
+	error_page 404 http://www.perivan.co.uk/404.html;
+
+	index index.html index.htm index.php;
+
+	location / {
+		try_files $uri $uri/ index.html;
+	}
+}
