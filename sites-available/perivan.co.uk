@@ -8,9 +8,6 @@ server {
 
 	index index.html index.htm index.php;
 
-	include /etc/nginx/conf/expire-images-1m;
-	include /etc/nginx/conf/php;
-
 	location = /404.html {
 		root /usr/share/nginx/www/perivan/;
 		allow all;
@@ -22,8 +19,21 @@ server {
 		include /etc/nginx/conf/expire-images-1m;
 	}
 
+	location ~ ^/(investor|order-tracking)/ {
+		root /usr/share/nginx/www/;
+
+		# Whitelist. Serve these files extensions only
+		if ($request_filename !~* \.(css|js|pdf|php|html)$ ) {
+		  return 403;
+		  break;
+		}
+		include /etc/nginx/conf/php;
+	}
+
+	include /etc/nginx/conf/expire-images-1m;
+	include /etc/nginx/conf/php;
+
 	location / {
 		try_files $uri $uri/ index.html;
 	}
-
 }
